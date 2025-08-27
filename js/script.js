@@ -1,18 +1,15 @@
-const menuIcon = document.getElementById("menu-icon");
-menuIcon.addEventListener("click", (evt) => {
-  const menus = document.getElementById("menus");
-  if (evt.target.name === "menu") {
-    evt.target.name = "close";
-    menus.classList.remove("end-[-200px]");
-    menus.classList.add("end-0");
-    document.getElementById("overlay").classList.remove("hidden");
-  } else {
-    evt.target.name = "menu";
-    menus.classList.remove("end-0");
-    menus.classList.add("end-[-200px]");
-    document.getElementById("overlay").classList.add("hidden");
-  }
-});
+// const menuIcon = document.querySelector("#menu-icon");
+
+const menus = document.querySelector(".menus");
+function showNav() {
+  menus.classList.remove("right-[-200px]");
+  menus.classList.add("right-0");
+}
+
+function closeNav() {
+  menus.classList.add("right-[-200px]");
+  menus.classList.remove("right-0");
+}
 
 const historyContainer = document.getElementById("history-container");
 
@@ -73,11 +70,13 @@ serviceCards.forEach((serviceCard) => {
     // Love react Feature
 
     // Copy Feature
+    let copyCount = document.querySelector("#copy-count");
     const copyBtn = evt.target.closest(".copy-btn");
     if (copyBtn) {
       const textToCopy = String(serviceNumber);
       navigator.clipboard.writeText(textToCopy);
       alert(`নম্বর কপি হয়েছেঃ ${textToCopy}`);
+      copyCount.textContent = Number(copyCount.textContent) + 1;
     }
     // Copy Feature
   });

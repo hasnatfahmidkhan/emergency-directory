@@ -46,61 +46,65 @@
           <!-- ===== End: Logo ===== -->
         </div>
         <!-- right side logo  -->
+        <!-- =================================== -->
         <!-- left side  -->
+        <!-- menu icon  -->
+        <div class="md:hidden">
+          <ion-icon
+            onclick="showNav()"
+            id="menu-icon"
+            name="menu"
+            class="text-3xl cursor-pointer rounded-full hover:text-white hover:bg-green-600 p-3"
+          ></ion-icon>
+        </div>
+        <!-- menu icon  -->
         <div
-          class="flex md:flex-row flex-col md:items-center items-end absolute top-3 end-0 md:static z-20 md:z-0"
+          class="menus fixed md:static top-0 right-[-200px] flex md:flex-row flex-col md:items-center bg-white p-5 md:h-0 h-[100vh] transition-all duration-300 ease-in"
         >
-          <!-- menu icon  -->
-          <div
-            class="block md:hidden mr-3 md:mr-0 transition-all duration-1000 ease-in-out"
-          >
+          <!-- close icon  -->
+          <div class="md:hidden">
             <ion-icon
-              id="menu-icon"
-              name="menu"
-              class="text-3xl cursor-pointer transition-all duration-100 ease-in rounded-full hover:text-white hover:bg-slate-400 p-3"
+              onclick="closeNav()"
+              name="close"
+              class="text-3xl cursor-pointer rounded-full hover:text-white hover:bg-green-600 p-3"
             ></ion-icon>
           </div>
-          <div
-            id="menus"
-            class="flex md:flex-row flex-col items-end md:items-center h-[100vh] md:h-[0vh] px-5 md:px-0 bg-white transition-all duration-500 ease-in-out fixed top-[5.5rem] end-[-200px] md:static"
+          <!-- close icon  -->
+          <!-- buttton 1 -->
+          <button
+            id="heart-btn"
+            class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 my-4 md:my-0 w-full md:w-fit"
           >
-            <!-- buttton 1 -->
-            <button
-              id="heart-btn"
-              class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 my-4 md:my-0 w-full md:w-fit"
-            >
-              <span class="text-xl font-extrabold mr-1">0</span>
-              <img
-                class="w-7"
-                src="./assets/heart.png"
-                alt="heart image"
-                loading="lazy"
-              />
-            </button>
-            <!-- buttton 2 -->
-            <button
-              id="heart-btn"
-              class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
-            >
-              <span id="coin" class="text-xl font-extrabold mr-1">100</span>
-              <img
-                class="w-7"
-                src="./assets/coin.png"
-                alt="coin image"
-                loading="lazy"
-              />
-            </button>
-            <!-- buttton 3 -->
-            <button
-              id="heart-btn"
-              class="btn border-none rounded-4xl px-8 py-7 bg-[#00A63E] text-xl font-medium text-white my-4 md:my-0 w-full md:w-fit"
-            >
-              <span class="mr-1">0</span>
-              copy
-            </button>
-          </div>
+            <span class="text-xl font-extrabold mr-1">0</span>
+            <img
+              class="w-7"
+              src="./assets/heart.png"
+              alt="heart image"
+              loading="lazy"
+            />
+          </button>
+          <!-- buttton 2 -->
+          <button
+            id="heart-btn"
+            class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
+          >
+            <span id="coin" class="text-xl font-extrabold mr-1">100</span>
+            <img
+              class="w-7"
+              src="./assets/coin.png"
+              alt="coin image"
+              loading="lazy"
+            />
+          </button>
+          <!-- buttton 3 -->
+          <button
+            id="heart-btn"
+            class="btn border-none rounded-4xl px-8 py-7 bg-[#00A63E] text-xl font-medium text-white my-4 md:my-0 w-full md:w-fit"
+          >
+            <span class="mr-1">0</span>
+            copy
+          </button>
         </div>
-
         <!-- left side  -->
       </div>
       <!-- ===== End: Navbar Section ===== -->
@@ -113,8 +117,8 @@
           <img src="./assets/logo-dark.png" alt="logo" loading="lazy" />
         </div>
         <div class="text-white font-semibold">
-          <h1 class="hind-madurai-font text-2xl md:text-4xl mb-4">
-            জরুরি সেবা ডিরেক্টরি
+          <h1 class="manrope-font text-2xl md:text-4xl mb-4">
+            Emergency Service Directory
           </h1>
           <p class="text-sm md:text-xl">
             Government Emergency Services at Your Fingertip – A Project by
@@ -152,8 +156,8 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">
-                  জাতীয় জরুরি সেবা
+                <h2 class="manrope-font font-bold text-xl">
+                  National Emergency Number
                 </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   National Emergency
@@ -165,14 +169,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   999
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  সার্বজনীন
+                  All
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -182,7 +186,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -212,7 +218,9 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">পুলিশ</h2>
+                <h2 class="manrope-font font-bold text-xl">
+                  Police Helpline Number
+                </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Police
                 </p>
@@ -223,14 +231,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   999
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  পুলিশ
+                  Police
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -240,7 +248,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -270,8 +280,8 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">
-                  ফায়ার সার্ভিস
+                <h2 class="manrope-font font-bold text-xl">
+                  Fire Service Number
                 </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Fire Service
@@ -283,14 +293,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   999
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  সার্বজনীন
+                  Fire
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -300,7 +310,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -330,8 +342,8 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">
-                  অ্যাম্বুলেন্স
+                <h2 class="manrope-font font-bold text-xl">
+                  Ambulance Service
                 </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Ambulance
@@ -343,14 +355,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   1994-999999
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  স্বাস্থ
+                  Health
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -360,7 +372,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -390,8 +404,8 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">
-                  নারী ও শিশু সহায়তা
+                <h2 class="manrope-font font-bold text-xl">
+                  Women & Child Helpline
                 </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Women & Child Helpline
@@ -403,14 +417,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   109
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  সহায়তা
+                  Help
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -420,7 +434,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -450,7 +466,9 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">দুদক</h2>
+                <h2 class="manrope-font font-bold text-xl">
+                  Anti-Corruption Helpline
+                </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Anti-Corruption
                 </p>
@@ -461,14 +479,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   106
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  সরকারি
+                  Govt.
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -478,7 +496,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -508,8 +528,8 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">
-                  বিদ্যুৎ বিভ্রাট
+                <h2 class="manrope-font font-bold text-xl">
+                  Electricity Helpline
                 </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Electricity Outage
@@ -521,14 +541,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   16216
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  বিদ্যুৎ
+                  Electricity
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -538,7 +558,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -568,9 +590,9 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">ব্র্যাক</h2>
+                <h2 class="manrope-font font-bold text-xl">Brac Helpline</h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
-                  Brack
+                  Brac
                 </p>
               </div>
             </div>
@@ -579,14 +601,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   16445
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  এনজিও
+                  NGO
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -596,7 +618,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -626,8 +650,8 @@
                 ></ion-icon>
               </div>
               <div class="mt-5">
-                <h2 class="hind-madurai-font font-bold text-xl">
-                  বাংলাদেশ রেলওয়ে
+                <h2 class="manrope-font font-bold text-xl">
+                  Bangladesh Railway Helpline
                 </h2>
                 <p class="service-title text-gray-400 font-medium manrope-font">
                   Bangladesh Railway
@@ -639,14 +663,14 @@
             <div>
               <div class="mt-4">
                 <h4
-                  class="service-number manrope-font font-extrabold text-2xl mb-1"
+                  class="service-number manrope-font font-bold text-2xl mb-1"
                 >
                   163
                 </h4>
                 <div
-                  class="badge badge-ghost hind-madurai-font font-extrabold text-gray-500 text-xs"
+                  class="badge badge-ghost manrope-font font-semibold text-gray-500 text-xs"
                 >
-                  পরিবহন
+                  Travel
                 </div>
               </div>
               <!-- ===== Start: Card Button ===== -->
@@ -656,7 +680,9 @@
                 >
                   <ion-icon name="copy-outline" class="text-xl"></ion-icon>Copy
                 </button>
-                <button class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn">
+                <button
+                  class="btn bg-green-600 hover:bg-green-700 text-white rounded-lg call-btn"
+                >
                   <ion-icon name="call-outline" class="text-xl"></ion-icon>Call
                 </button>
               </div>
@@ -689,9 +715,10 @@
         <!-- Call History Header  -->
 
         <!-- ===== Start: Call History Cards ===== -->
-        <section id="history-container" class="mt-4 grid grid-cols-1 gap-3">
-         
-        </section>
+        <section
+          id="history-container"
+          class="mt-4 grid grid-cols-1 gap-3"
+        ></section>
         <!-- ===== End: Call History Cards ===== -->
       </section>
       <!-- ===== End: Call History ===== -->
