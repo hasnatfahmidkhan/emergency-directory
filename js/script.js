@@ -23,18 +23,16 @@ const historyClear = document.getElementById("history-clear");
 const serviceCards = document.querySelectorAll(".service-card");
 
 serviceCards.forEach((serviceCard) => {
+  // Service Card Title and Number
+  const serviceTitle = serviceCard.querySelector(".service-title").innerText;
+  const serviceNumber = serviceCard.querySelector(".service-number").innerText;
+
   serviceCard.addEventListener("click", (evt) => {
     // Calling Features
     if (evt.target.closest(".call-btn")) {
       const serviceCard =
         evt.target.closest(".call-btn").parentElement.parentElement
           .parentElement;
-
-      // Service Card Title and Number
-      const serviceTitle =
-        serviceCard.querySelector(".service-title").innerText;
-      const serviceNumber =
-        serviceCard.querySelector(".service-number").innerText;
 
       // local time
       const date = new Date();
@@ -76,7 +74,11 @@ serviceCards.forEach((serviceCard) => {
 
     // Copy Feature
     const copyBtn = evt.target.closest(".copy-btn");
-    // console.log(copyBtn);
+    if (copyBtn) {
+      const textToCopy = String(serviceNumber);
+      navigator.clipboard.writeText(textToCopy);
+      alert(`নম্বর কপি হয়েছেঃ ${textToCopy}`);
+    }
     // Copy Feature
   });
 });
