@@ -82,7 +82,7 @@
               id="heart-btn"
               class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
             >
-              <span class="text-xl font-extrabold mr-1">100</span>
+              <span id="coin" class="text-xl font-extrabold mr-1">100</span>
               <img
                 class="w-7"
                 src="./assets/coin.png"
@@ -133,7 +133,7 @@
         <!-- ===== Start: Directory Card Container ===== -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Card 1 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -190,7 +190,7 @@
           <!-- Card 1 -->
 
           <!-- Card 2 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -245,7 +245,7 @@
           <!-- Card 2 -->
 
           <!-- Card 3 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -302,7 +302,7 @@
           <!-- Card 3 -->
 
           <!-- Card 4 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -359,7 +359,7 @@
           <!-- Card 4 -->
 
           <!-- Card 5 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -416,7 +416,7 @@
           <!-- Card 5 -->
 
           <!-- Card 6 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -471,7 +471,7 @@
           <!-- Card 6 -->
 
           <!-- Card 7 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -528,7 +528,7 @@
           <!-- Card 7 -->
 
           <!-- Card 8 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -583,7 +583,7 @@
           <!-- Card 8 -->
 
           <!-- Card 9 -->
-          <div class="bg-white shadow-md p-5 rounded-xl">
+          <div class="service-card bg-white shadow-md p-5 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
@@ -644,7 +644,22 @@
       <!-- ===== End: Call Directory ===== -->
 
       <!-- ===== Start: Call History ===== -->
-      <section class="bg-blue-500 md:col-span-3">Call History</section>
+      <section class="bg-white shadow-md p-5 rounded-xl md:col-span-3">
+        <!-- Call History Header  -->
+        <div class="flex justify-between">
+          <h4 class="font-bold inline-flex gap-1 items-center">
+            <ion-icon name="time-outline" class="text-xl"></ion-icon>Call
+            History
+          </h4>
+          <button
+            id="history-clear"
+            class="btn bg-green-600 text-white rounded-3xl px-5"
+          >
+            Clear
+          </button>
+        </div>
+        <!-- Call History Header  -->
+      </section>
       <!-- ===== End: Call History ===== -->
     </main>
     <!-- ===== End: Main Section ===== -->

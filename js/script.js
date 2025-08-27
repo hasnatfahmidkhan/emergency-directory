@@ -16,16 +16,35 @@ menuIcon.addEventListener("click", (evt) => {
 
 // Main Section
 const callBtns = document.querySelectorAll(".call-btn");
+let coin = Number(document.getElementById("coin").textContent);
+const historyClear = document.getElementById("history-clear");
+// console.log(historyClear)
+const servicesCard = document.querySelectorAll(".service-card");
 
-callBtns.forEach((callBtn) => {
-  callBtn.addEventListener("click", (evt) => {
-    const serviceCard =
-      evt.currentTarget.parentElement.parentElement.parentElement;
-    const serviceTitle = serviceCard.querySelector(".service-title").innerText;
-    const serviceNumber = serviceCard.querySelector(".service-number").innerText;
-    const date = new Date();
-    const time = date.toLocaleTimeString();
-    console.log(serviceTitle, serviceNumber, time);
-    alert(`📞 Calling ${serviceTitle} ${serviceNumber}`);
+servicesCard.forEach((servicesCard) => {
+  servicesCard.addEventListener("click", (evt) => {
+    if (evt.target.closest(".call-btn")) {
+      const serviceCard =
+        evt.target.closest(".call-btn").parentElement.parentElement
+          .parentElement;
+
+      // Service Card Title and Number
+      const serviceTitle =
+        serviceCard.querySelector(".service-title").innerText;
+      const serviceNumber =
+        serviceCard.querySelector(".service-number").innerText;
+
+      // local time
+      const date = new Date();
+      const time = date.toLocaleTimeString();
+      if (coin >= 20) {
+        alert(`📞 Calling ${serviceTitle} ${serviceNumber}`);
+        coin -= 20;
+        document.getElementById("coin").textContent = coin;
+      } else {
+        alert(`❌ আপনার পর্যাপ্ত কয়েন নেই; কল করতে কমপক্ষে ২০ কয়েন লাগবে।`);
+      }
+    }
   });
 });
+
