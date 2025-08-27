@@ -14,14 +14,16 @@ menuIcon.addEventListener("click", (evt) => {
   }
 });
 
+const historyContainer = document.getElementById("history-container");
+
 // Main Section
 const callBtns = document.querySelectorAll(".call-btn");
 let coin = Number(document.getElementById("coin").textContent);
 const historyClear = document.getElementById("history-clear");
-const servicesCard = document.querySelectorAll(".service-card");
+const serviceCards = document.querySelectorAll(".service-card");
 
-servicesCard.forEach((servicesCard) => {
-  servicesCard.addEventListener("click", (evt) => {
+serviceCards.forEach((serviceCard) => {
+  serviceCard.addEventListener("click", (evt) => {
     // Calling Features
     if (evt.target.closest(".call-btn")) {
       const serviceCard =
@@ -43,7 +45,6 @@ servicesCard.forEach((servicesCard) => {
         document.getElementById("coin").textContent = coin;
 
         // Call History Feature
-        const historyContainer = document.getElementById("history-container");
         const historyCard = `
      <div class="bg-gray-100 flex justify-between items-center rounded-lg p-5">
         <div>
@@ -63,7 +64,7 @@ servicesCard.forEach((servicesCard) => {
         alert(`❌ আপনার পর্যাপ্ত কয়েন নেই; কল করতে কমপক্ষে ২০ কয়েন লাগবে।`);
       }
     }
-    // Calling Features
+    // Calling Feature
 
     // Love react Feature
     const heartIcon = evt.target.closest('[name="heart-outline"]');
@@ -73,6 +74,15 @@ servicesCard.forEach((servicesCard) => {
     }
     // Love react Feature
 
-    
+    // Copy Feature
+    const copyBtn = evt.target.closest(".copy-btn");
+    // console.log(copyBtn);
+    // Copy Feature
   });
+});
+
+// Call History
+const clearBtn = document.getElementById("history-clear");
+clearBtn.addEventListener("click", () => {
+  historyContainer.innerHTML = "";
 });
