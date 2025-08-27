@@ -4,11 +4,13 @@ const menus = document.querySelector(".menus");
 function showNav() {
   menus.classList.remove("right-[-200px]");
   menus.classList.add("right-0");
+  document.querySelector("#overlay").classList.remove("hidden");
 }
 
 function closeNav() {
   menus.classList.add("right-[-200px]");
   menus.classList.remove("right-0");
+  document.querySelector("#overlay").classList.add("hidden");
 }
 
 const historyContainer = document.getElementById("history-container");
@@ -71,7 +73,7 @@ serviceCards.forEach((serviceCard) => {
 
     // Copy Feature
     let copyCount = document.querySelector("#copy-count");
-    console.log(copyCount)
+    console.log(copyCount);
     const copyBtn = evt.target.closest(".copy-btn");
     if (copyBtn) {
       const textToCopy = String(serviceNumber);

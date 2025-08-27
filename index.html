@@ -59,7 +59,7 @@
         </div>
         <!-- menu icon  -->
         <div
-          class="menus fixed md:static top-0 right-[-200px] flex md:flex-row flex-col md:items-center bg-white p-5 md:h-0 h-[100vh] transition-all duration-300 ease-in"
+          class="menus fixed md:static top-0 right-[-200px] flex md:flex-row flex-col md:items-center bg-white p-5 md:h-0 h-[100vh] transition-all duration-300 ease-in z-20"
         >
           <!-- close icon  -->
           <div class="md:hidden">
@@ -104,6 +104,12 @@
           </button>
         </div>
         <!-- left side  -->
+        <!-- OverLay  -->
+        <div
+          id="overlay"
+          onclick="closeNav()"
+          class="bg-[#000000b3] hidden fixed inset-0 z-10"
+        ></div>
       </div>
       <!-- ===== End: Navbar Section ===== -->
 
