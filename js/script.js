@@ -18,11 +18,11 @@ menuIcon.addEventListener("click", (evt) => {
 const callBtns = document.querySelectorAll(".call-btn");
 let coin = Number(document.getElementById("coin").textContent);
 const historyClear = document.getElementById("history-clear");
-// console.log(historyClear)
 const servicesCard = document.querySelectorAll(".service-card");
 
 servicesCard.forEach((servicesCard) => {
   servicesCard.addEventListener("click", (evt) => {
+    // Calling Features
     if (evt.target.closest(".call-btn")) {
       const serviceCard =
         evt.target.closest(".call-btn").parentElement.parentElement
@@ -45,6 +45,14 @@ servicesCard.forEach((servicesCard) => {
         alert(`❌ আপনার পর্যাপ্ত কয়েন নেই; কল করতে কমপক্ষে ২০ কয়েন লাগবে।`);
       }
     }
+    // Calling Features
+
+    // Love react Feature
+    const heartIcon = evt.target.closest('[name="heart-outline"]');
+    if (heartIcon) {
+      const heartCount = document.querySelector("#heart-btn span");
+      heartCount.textContent = Number(heartCount.textContent) + 1;
+    }
+    // Love react Feature
   });
 });
-
