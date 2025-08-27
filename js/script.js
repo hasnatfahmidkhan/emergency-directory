@@ -41,6 +41,24 @@ servicesCard.forEach((servicesCard) => {
         alert(`📞 Calling ${serviceTitle} ${serviceNumber}`);
         coin -= 20;
         document.getElementById("coin").textContent = coin;
+
+        // Call History Feature
+        const historyContainer = document.getElementById("history-container");
+        const historyCard = `
+     <div class="bg-gray-100 flex justify-between items-center rounded-lg p-5">
+        <div>
+          <h1 class="hind-madurai-font font-semibold">${serviceTitle}</h1>
+          <p class="text-gray-500 font-semibold mt-2 manrope-font">${serviceNumber}</p>
+        </div>
+        <div>
+          <h3 class="font-semibold manrope-font">${time}</h3>
+          </div>
+      </div>
+    `;
+        const div = document.createElement("div");
+        div.innerHTML = historyCard;
+        historyContainer.appendChild(div);
+        // Call History Feature
       } else {
         alert(`❌ আপনার পর্যাপ্ত কয়েন নেই; কল করতে কমপক্ষে ২০ কয়েন লাগবে।`);
       }
@@ -54,5 +72,7 @@ servicesCard.forEach((servicesCard) => {
       heartCount.textContent = Number(heartCount.textContent) + 1;
     }
     // Love react Feature
+
+    
   });
 });
