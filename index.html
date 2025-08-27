@@ -85,7 +85,6 @@
           </button>
           <!-- buttton 2 -->
           <button
-            id="heart-btn"
             class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
           >
             <span id="coin" class="text-xl font-extrabold mr-1">100</span>
@@ -98,10 +97,9 @@
           </button>
           <!-- buttton 3 -->
           <button
-            id="heart-btn"
             class="btn border-none rounded-4xl px-8 py-7 bg-[#00A63E] text-xl font-medium text-white my-4 md:my-0 w-full md:w-fit"
           >
-            <span class="mr-1">0</span>
+            <span id="copy-count" class="mr-1">0</span>
             copy
           </button>
         </div>
@@ -133,7 +131,7 @@
     <!-- ===== Start: Main Section ===== -->
     <main class="my-10 w-10/12 mx-auto grid grid-cols-1 md:grid-cols-12 gap-8">
       <!-- ===== Start: Call Directory ===== -->
-      <section class="md:col-span-9">
+      <section class="md:col-span-9 order-2 md:order-1">
         <!-- ===== Start: Directory Card Container ===== -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
           <!-- Card 1 -->
@@ -168,9 +166,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   999
                 </h4>
                 <div
@@ -230,9 +226,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   999
                 </h4>
                 <div
@@ -292,9 +286,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   999
                 </h4>
                 <div
@@ -354,9 +346,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   1994-999999
                 </h4>
                 <div
@@ -416,9 +406,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   109
                 </h4>
                 <div
@@ -478,9 +466,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   106
                 </h4>
                 <div
@@ -540,9 +526,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   16216
                 </h4>
                 <div
@@ -600,9 +584,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   16445
                 </h4>
                 <div
@@ -662,9 +644,7 @@
             <!-- ===== Start: card body ===== -->
             <div>
               <div class="mt-4">
-                <h4
-                  class="service-number manrope-font font-bold text-2xl mb-1"
-                >
+                <h4 class="service-number manrope-font font-bold text-2xl mb-1">
                   163
                 </h4>
                 <div
@@ -698,7 +678,9 @@
       <!-- ===== End: Call Directory ===== -->
 
       <!-- ===== Start: Call History ===== -->
-      <section class="bg-white shadow-md p-5 rounded-xl md:col-span-3">
+      <section
+        class="bg-white shadow-md p-5 rounded-xl md:col-span-3 order-1 md:order-2"
+      >
         <!-- Call History Header  -->
         <div class="flex justify-between">
           <h4 class="font-bold manrope-font inline-flex gap-1 items-center">
@@ -707,7 +689,7 @@
           </h4>
           <button
             id="history-clear"
-            class="btn bg-green-600 text-white text-[18px] rounded-4xl px-8 py-6"
+            class="btn bg-green-600 hover:bg-green-700 text-white text-[18px] rounded-4xl px-8 py-6"
           >
             Clear
           </button>

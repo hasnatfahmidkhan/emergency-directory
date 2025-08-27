@@ -71,6 +71,7 @@ serviceCards.forEach((serviceCard) => {
 
     // Copy Feature
     let copyCount = document.querySelector("#copy-count");
+    console.log(copyCount)
     const copyBtn = evt.target.closest(".copy-btn");
     if (copyBtn) {
       const textToCopy = String(serviceNumber);
