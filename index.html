@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bangladesh Emergency Service Directory</title>
+    <!-- ===== Start: Iconnic icon ===== -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- ===== End: Iconnic icon ===== -->
     <!-- ===== Start: DaisyUI and Tailwind CDN ===== -->
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@5"
@@ -12,10 +22,108 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- ===== End: DaisyUI and Tailwind CDN ===== -->
+    <!-- ===== Start: Custom CSS ===== -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <!-- ===== End: Custom CSS ===== -->
   </head>
   <body>
     <!-- ===== Start: Header Section ===== -->
+    <header class="manrope-font">
+      <!-- ===== Start: Navbar Section ===== -->
+      <div
+        class="flex justify-between items-center bg-base-100 bg-white py-5 w-11/12 mx-auto"
+      >
+        <!-- right side logo  -->
+        <div>
+          <!-- ===== Start: Logo ===== -->
+          <div class="flex items-center gap-3">
+            <img class="w-12 object-cover" src="./assets/logo.png" alt="logo" />
+            <h4 class="text-[#006747] text-2xl font-extrabold leading-7">
+              Emergency <br />
+              Services
+            </h4>
+          </div>
+          <!-- ===== End: Logo ===== -->
+        </div>
+        <!-- right side logo  -->
+        <!-- left side  -->
+        <div
+          class="flex md:flex-row flex-col md:items-center items-end absolute top-3 end-0 md:static z-20 md:z-0"
+        >
+          <!-- menu icon  -->
+          <div
+            class="block md:hidden mr-3 md:mr-0 transition-all duration-1000 ease-in-out"
+          >
+            <ion-icon
+              id="menu-icon"
+              name="menu"
+              class="text-3xl cursor-pointer transition-all duration-100 ease-in rounded-full hover:text-white hover:bg-slate-400 p-3"
+            ></ion-icon>
+          </div>
+          <div
+            id="menus"
+            class="flex md:flex-row flex-col items-end md:items-center h-[100vh] md:h-[0vh] px-5 md:px-0 bg-white transition-all duration-500 ease-in-out fixed top-[5.5rem] end-[-200px] md:static"
+          >
+            <!-- buttton 1 -->
+            <button
+              id="heart-btn"
+              class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 my-4 md:my-0 w-full md:w-fit"
+            >
+              <span class="text-xl font-extrabold mr-1">0</span>
+              <img
+                class="w-7"
+                src="./assets/heart.png"
+                alt="heart image"
+                loading="lazy"
+              />
+            </button>
+            <!-- buttton 2 -->
+            <button
+              id="heart-btn"
+              class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
+            >
+              <span class="text-xl font-extrabold mr-1">100</span>
+              <img
+                class="w-7"
+                src="./assets/coin.png"
+                alt="coin image"
+                loading="lazy"
+              />
+            </button>
+            <!-- buttton 3 -->
+            <button
+              id="heart-btn"
+              class="btn border-none rounded-4xl px-8 py-7 bg-[#00A63E] text-xl font-medium text-white my-4 md:my-0 w-full md:w-fit"
+            >
+              <span class="mr-1">0</span>
+              copy
+            </button>
+          </div>
+        </div>
 
+        <!-- left side  -->
+      </div>
+      <!-- ===== End: Navbar Section ===== -->
+
+      <!-- ===== Start: Banner Section ===== -->
+      <section
+        class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] flex flex-col justify-center items-center text-center gap-6 py-8 px-4 md:px-0"
+      >
+        <div class="w-24">
+          <img src="./assets/logo-dark.png" alt="logo" loading="lazy" />
+        </div>
+        <div class="text-white font-semibold">
+          <h1 class="hind-madurai-font text-2xl md:text-4xl mb-4">
+            জরুরি সেবা ডিরেক্টরি
+          </h1>
+          <p class="text-sm md:text-xl">
+            Government Emergency Services at Your Fingertip – A Project by
+            Government of the People’s Republic of Bangladesh
+          </p>
+        </div>
+      </section>
+      <!-- ===== End: Banner Section ===== -->
+    </header>
     <!-- ===== End: Header Section ===== -->
 
     <!-- ===== Start: Main Section ===== -->
