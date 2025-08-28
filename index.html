@@ -33,7 +33,7 @@
       <div
         class="flex justify-between items-center bg-base-100 py-5 w-11/12 2xl:w-10/12 mx-auto"
       >
-        <!-- right side logo  -->
+        <!-- Start: right side logo  -->
         <div>
           <!-- ===== Start: Logo ===== -->
           <div class="flex items-center gap-3">
@@ -45,10 +45,10 @@
           </div>
           <!-- ===== End: Logo ===== -->
         </div>
-        <!-- right side logo  -->
-        <!-- =================================== -->
-        <!-- left side  -->
-        <!-- menu icon  -->
+        <!-- End: right side logo  -->
+
+        <!-- Start: left side  -->
+        <!-- Start: menu icon  -->
         <div class="md:hidden">
           <ion-icon
             onclick="showNav()"
@@ -57,11 +57,11 @@
             class="text-3xl cursor-pointer rounded-full hover:text-white hover:bg-green-600 p-3"
           ></ion-icon>
         </div>
-        <!-- menu icon  -->
+        <!-- End: menu icon  -->
         <div
           class="menus fixed md:static top-0 right-[-200px] flex md:flex-row flex-col md:items-center bg-white p-5 md:p-0 md:h-0 h-[100vh] transition-all duration-300 ease-in z-20"
         >
-          <!-- close icon  -->
+          <!-- Start: close icon  -->
           <div class="md:hidden">
             <ion-icon
               onclick="closeNav()"
@@ -69,11 +69,11 @@
               class="text-3xl cursor-pointer rounded-full hover:text-white hover:bg-green-600 p-3"
             ></ion-icon>
           </div>
-          <!-- close icon  -->
+          <!-- End: close icon  -->
           <!-- buttton 1 -->
           <button
             id="heart-btn"
-            class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 my-4 md:my-0 w-full md:w-fit"
+            class="btn border-none rounded-xl md:rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 my-4 md:my-0 w-full md:w-fit"
           >
             <span class="text-xl font-extrabold mr-1">0</span>
             <img
@@ -85,7 +85,7 @@
           </button>
           <!-- buttton 2 -->
           <button
-            class="btn border-none rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
+            class="btn border-none rounded-xl md:rounded-4xl px-8 py-7 bg-[#41ff6b1a] md:me-4 w-full md:w-fit"
           >
             <span id="coin" class="text-xl font-extrabold mr-1">100</span>
             <img
@@ -97,19 +97,20 @@
           </button>
           <!-- buttton 3 -->
           <button
-            class="btn border-none rounded-4xl px-8 py-7 bg-[#00A63E] text-xl font-medium text-white my-4 md:my-0 w-full md:w-fit"
+            class="btn border-none rounded-xl md:rounded-4xl px-8 py-7 bg-[#00A63E] text-xl font-medium text-white my-4 md:my-0 w-full md:w-fit"
           >
             <span id="copy-count" class="mr-1">0</span>
             copy
           </button>
         </div>
-        <!-- left side  -->
-        <!-- OverLay  -->
+        <!-- End: left side  -->
+        <!-- Start: OverLay  -->
         <div
           id="overlay"
           onclick="closeNav()"
           class="bg-[#000000b3] hidden fixed inset-0 z-10"
         ></div>
+        <!-- End: OverLay  -->
       </div>
       <!-- ===== End: Navbar Section ===== -->
 
@@ -121,7 +122,7 @@
           <img src="./assets/logo-dark.png" alt="logo" loading="lazy" />
         </div>
         <div class="text-white font-semibold">
-          <h1 class="manrope-font text-2xl md:text-4xl mb-4">
+          <h1 class="manrope-font text-xl md:text-4xl mb-4">
             Emergency Service Directory
           </h1>
           <p class="text-sm md:text-xl">
@@ -141,13 +142,15 @@
       <!-- ===== Start: Call Directory ===== -->
       <section class="md:col-span-6 lg:col-span-9 order-2 md:order-1">
         <!-- ===== Start: Directory Card Container ===== -->
-        <div class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6 xl:gap-5 2xl:gap-7">
+        <div
+          class="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-5 md:gap-6 xl:gap-5 2xl:gap-7"
+        >
           <!-- Card 1 -->
           <div class="service-card bg-white shadow-md p-6 rounded-xl">
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/emergency.png"
@@ -208,7 +211,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-blue-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/police.png"
@@ -268,7 +271,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/fire-service.png"
@@ -328,7 +331,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/ambulance.png"
@@ -388,7 +391,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/emergency.png"
@@ -448,7 +451,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/anti-corruption.png"
@@ -508,7 +511,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/emergency.png"
@@ -568,7 +571,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/brac.png"
@@ -626,7 +629,7 @@
             <!-- ===== Start: card header ===== -->
             <div>
               <div class="flex justify-between items-center">
-                <div class="bg-red-200 p-3 rounded-xl">
+                <div class="bg-red-100 p-3 rounded-xl">
                   <img
                     class="w-7"
                     src="./assets/Bangladesh-Railway.png"
